@@ -42,7 +42,3 @@ jspm_packages
 .vscode
 .idea
 
-# Non TS files
-*.d.ts
-*.js
-*.js.map
