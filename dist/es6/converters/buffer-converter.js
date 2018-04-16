@@ -1,4 +1,4 @@
-var BufferConverter = (function () {
+var BufferConverter = /** @class */ (function () {
     function BufferConverter(encoding) {
         if (encoding === void 0) { encoding = "json"; }
         this._encoding = encoding;

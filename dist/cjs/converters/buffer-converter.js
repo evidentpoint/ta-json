@@ -1,23 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class BufferConverter {
-    constructor(encoding = "json") {
+var BufferConverter = /** @class */ (function () {
+    function BufferConverter(encoding) {
+        if (encoding === void 0) { encoding = "json"; }
         this._encoding = encoding;
     }
-    serialize(property) {
+    BufferConverter.prototype.serialize = function (property) {
         if (this._encoding === "json") {
             return property.toJSON();
         }
         return property.toString(this._encoding);
-    }
-    deserialize(value) {
+    };
+    BufferConverter.prototype.deserialize = function (value) {
         if (this._encoding === "json") {
             return Buffer.from(value.data);
         }
         return Buffer.from(value, this._encoding);
-    }
-    collapseArrayWithSingleItem() {
+    };
+    BufferConverter.prototype.collapseArrayWithSingleItem = function () {
         return false;
-    }
-}
+    };
+    return BufferConverter;
+}());
 exports.BufferConverter = BufferConverter;

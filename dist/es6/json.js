@@ -1,6 +1,6 @@
 import { serialize } from "./methods/serialize";
 import { deserialize } from "./methods/deserialize";
-var JSON = (function () {
+var JSON = /** @class */ (function () {
     function JSON() {
     }
     JSON.deserialize = function (object, type, options) {

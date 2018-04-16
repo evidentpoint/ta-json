@@ -1,4 +1,4 @@
-var DateConverter = (function () {
+var DateConverter = /** @class */ (function () {
     function DateConverter() {
     }
     DateConverter.prototype.serialize = function (property) {

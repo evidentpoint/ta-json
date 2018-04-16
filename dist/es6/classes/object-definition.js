@@ -1,5 +1,5 @@
 import { PropertyDefinition } from "./property-definition";
-var ObjectDefinition = (function () {
+var ObjectDefinition = /** @class */ (function () {
     function ObjectDefinition() {
         this.ctr = function () { };
         this.beforeDeserialized = function () { };

@@ -1,4 +1,4 @@
-var PropertyDefinition = (function () {
+var PropertyDefinition = /** @class */ (function () {
     function PropertyDefinition() {
         this.array = false;
         this.set = false;

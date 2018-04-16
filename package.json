@@ -6,7 +6,7 @@
   "types": "dist/es6/index.d.ts",
   "module": "dist/es6/index.js",
   "scripts": {
-    "lint": "tslint -c tslint.json --type-check --project ./tsconfig.json",
+    "lint": "tslint -c tslint.json --project ./tsconfig.json",
     "compile": "tsc && tsc -p tsconfig.cjs.json",
     "compile:w": "tsc -w",
     "prepublishOnly": "npm run build",
@@ -37,9 +37,9 @@
     "reflect-metadata": "latest"
   },
   "devDependencies": {
-    "@edcarroll/code-style": "latest",
-    "@types/node": "latest",
-    "tslint": "latest",
-    "typescript": "latest"
+    "@edcarroll/code-style": "^2.0.0",
+    "@types/node": "^9.6.4",
+    "tslint": "^5.5.0",
+    "typescript": "^2.3.4"
   }
 }

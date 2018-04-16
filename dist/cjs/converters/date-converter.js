@@ -1,14 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class DateConverter {
-    serialize(property) {
+var DateConverter = /** @class */ (function () {
+    function DateConverter() {
+    }
+    DateConverter.prototype.serialize = function (property) {
         return property.toString();
-    }
-    deserialize(value) {
+    };
+    DateConverter.prototype.deserialize = function (value) {
         return new Date(value);
-    }
-    collapseArrayWithSingleItem() {
+    };
+    DateConverter.prototype.collapseArrayWithSingleItem = function () {
         return false;
-    }
-}
+    };
+    return DateConverter;
+}());
 exports.DateConverter = DateConverter;

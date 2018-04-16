@@ -1,19 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const serialize_1 = require("./methods/serialize");
-const deserialize_1 = require("./methods/deserialize");
-class JSON {
-    static deserialize(object, type, options) {
+var serialize_1 = require("./methods/serialize");
+var deserialize_1 = require("./methods/deserialize");
+var JSON = /** @class */ (function () {
+    function JSON() {
+    }
+    JSON.deserialize = function (object, type, options) {
         return deserialize_1.deserialize(object, type, options);
-    }
-    static parse(json, type, options) {
+    };
+    JSON.parse = function (json, type, options) {
         return this.deserialize(global.JSON.parse(json), type, options);
-    }
-    static serialize(value) {
+    };
+    JSON.serialize = function (value) {
         return serialize_1.serialize(value);
-    }
-    static stringify(object) {
+    };
+    JSON.stringify = function (object) {
         return global.JSON.stringify(this.serialize(object));
-    }
-}
+    };
+    return JSON;
+}());
 exports.JSON = JSON;
